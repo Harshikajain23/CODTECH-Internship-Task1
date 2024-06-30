@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analyzer & Summarizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="green">
+        <h1>Sentiment Analyzer & Summarizer</h1>
+        </div>
+        <form id="text-form" method="POST">
+            <textarea name="text" id="text" rows="10" cols="50" placeholder="Enter text to analyze or summarize..."></textarea><br>
+            <div class="button-container">
+                <button type="button" id="analyzeTextButton">Analyze Sentiment</button>
+                <button type="button" id="summarizeTextButton">Summarize Text</button>
+             </div>
+        <div id="results" class="results" method="GET">
+    
+            <!-- Results will be displayed here -->
+        </div>
+    </div>
+
+    <script>
+        function displayResults(data) {
+            let resultsDiv = document.getElementById('results');
+            // Remove curly brackets and the word "summary"
+            let resultString = JSON.stringify(data, null, 4)
+                .replace(/[{}]/g, '')
+                .replace(/"summary":/g, '')
+                .replace(/[""]/g, '');
+            resultsDiv.innerText = resultString;
+        }
+
+
+        function analyzeText() {
+            let text = document.getElementById('text').value;
+            $.ajax({
+                url: '/',
+                type: 'POST',
+                data: { text: text, analyze_text: true },
+                success: function(response) {
+                    displayResults(response);
+                }
+            });
+        }
+
+        function summarizeText() {
+            let text = document.getElementById('text').value;
+            $.ajax({
+                url: '/',
+                type: 'POST',
+                data: { text: text, summarize_text: true },
+                success: function(response) {
+                    displayResults(response);
+                }
+            });
+        }
+
+        document.getElementById('analyzeTextButton').addEventListener('click', analyzeText);
+        document.getElementById('summarizeTextButton').addEventListener('click', summarizeText);
+    </script>
+</body>
+</html>
