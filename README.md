@@ -39,8 +39,8 @@ This project is a web application designed to analyze the sentiment of user-prov
 ### Step 1: Clone the Repository
 
 ``` 
-git clone https://github.com/your-username/sentiment-analysis-summarization-web-app.git
-cd sentiment-analysis-summarization-web-app
+git clone https://github.com/Harshikajain23/CODTECH-Internship-Task1.git
+cd CODTECH-Internship-Task1
 ```
 
 ### Step 2: Set Up Virtual Environment (Optional)
