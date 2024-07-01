@@ -100,6 +100,12 @@ We appreciate your contributions! Follow these steps to contribute to the projec
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
+![screen shot 1](https://github.com/Harshikajain23/CODTECH-Internship-Task1/assets/129208900/903c6f0d-3544-4844-ba35-d4c4076b4a66)
+
+![screen shot 2](https://github.com/Harshikajain23/CODTECH-Internship-Task1/assets/129208900/d9b6189a-d1d9-47f4-b465-ff6a28498001)
+
+
+
 
 
 
