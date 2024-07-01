@@ -76,6 +76,33 @@ python app.py
 This will start the Flask development server. By default, it runs on http://127.0.0.1:5000.  
 Now you can access the project by navigating to http://127.0.0.1:5000 in your web browser.
 
+## Usage
+
+- Navigate to the project directory and run `python app.py`.
+- Open your browser and go to `http://127.0.0.1:5000`.
+- Type or paste your text into the provided text area.
+- Click the **"Analyze Sentiment"** button to see sentiment analysis results.
+- Click the **"Summarize Text"** button to generate and display a summary.
+- Sentiment analysis and summary results will be displayed below the text area.
+- Press `Ctrl + C` in the terminal to stop the application.
+
+## Contributing
+  
+We appreciate your contributions! Follow these steps to contribute to the project.
+
+- Fork the repository.
+- Create a new branch.
+- Make and test your changes.
+- Commit and push your changes.
+- Submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+
+
+
 
 
 
